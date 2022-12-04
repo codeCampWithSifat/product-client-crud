@@ -6,7 +6,7 @@ const Create = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/product", {
+    fetch("https://product-server-crud-production.up.railway.app/product", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

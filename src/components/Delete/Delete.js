@@ -4,7 +4,7 @@ import useProducts from "../../hooks/useProducts";
 const Delete = () => {
   const [products, setProducts] = useProducts();
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://product-server-crud-production.up.railway.app/product")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -14,7 +14,7 @@ const Delete = () => {
   const handleDeleteProduct = (id) => {
     console.log(id);
     if (window.confirm("Are You Sure You Want To Delete This One")) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://product-server-crud-production.up.railway.app/product/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

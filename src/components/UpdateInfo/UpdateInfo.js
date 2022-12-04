@@ -8,7 +8,7 @@ const UpdateInfo = () => {
     const {id} = useParams()
     const onSubmit = (data) => {
         console.log(data);
-        fetch(`http://localhost:5000/product/${id}` , {
+        fetch(`https://product-server-crud-production.up.railway.app/${id}` , {
             method : "PUT",
             headers : {
                 "Content-Type" : "application/json"

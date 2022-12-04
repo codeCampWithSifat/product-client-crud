@@ -6,7 +6,7 @@ const Update = () => {
   const [products, setProducts] = useProducts();
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://product-server-crud-production.up.railway.app/product")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
